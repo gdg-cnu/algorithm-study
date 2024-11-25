@@ -1,6 +1,8 @@
+# 소수구하기
 n,m =map(int, input().split())
 
 for i in range(n,m+1):
+    # 숫자 １은 제외
     if i ==1:
         continue
     
