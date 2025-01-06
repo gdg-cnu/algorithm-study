@@ -1,4 +1,4 @@
-# 10870
+# 10870번
 
 n = int(input())
 fibonacci = [0,1]
