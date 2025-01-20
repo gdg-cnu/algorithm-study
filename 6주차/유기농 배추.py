@@ -7,7 +7,7 @@ input = sys.stdin.readline
 def dfs(x, y):
     # 상하좌우
     dx = [0, 0, -1, 1] # x축 이동: 위, 아래, 왼, 오
-    dy = [1, -1, 0, 0] # y축 이동동
+    dy = [1, -1, 0, 0] # y축 이동
 
     # 네 방향 탐색
     for i in range(4):
@@ -31,8 +31,8 @@ for _ in range(t):
     # 배추 그룹 수(=배추흰지렁이 개수) 세기
     count = 0
     for a in range(m):
-        for b in range(n):
-            if graph[b][a] == 1:
-                dfs(a ,b)
-                count += 1
+        for b in range(n): 
+            if graph[b][a] == 1:  # 아직 방문하지 않은 배추 발견
+                dfs(a, b)         # 해당 배추 그룹을 DFS로 탐색
+                count += 1        # 탐색이 끝나면 count
     print(count)
